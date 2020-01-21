@@ -20,6 +20,8 @@ namespace AdminSeguridad
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            System.Web.Helpers.AntiForgeryConfig.UniqueClaimTypeIdentifier =
+               System.Security.Claims.ClaimTypes.NameIdentifier;
 
             Log.Info("Routes and bundles registered");
             Log.Info("Started");
