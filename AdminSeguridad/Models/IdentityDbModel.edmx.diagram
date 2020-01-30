@@ -5,15 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d42d6bdf01244faba60f75f2821aa91b" Name="Diagram1">
-        <EntityTypeShape EntityType="IdentityModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IdentityModel.Rol" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="IdentityModel.Usuario" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="IdentityModel.Usuario_Rol" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IdentityModel.sysdiagrams" Width="1.5" PointX="7.375" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="IdentityModel.Rol" Width="1.5" PointX="3.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IdentityModel.Usuario" Width="1.5" PointX="1.125" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IdentityModel.Usuario_Rol" Width="1.5" PointX="1.125" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="IdentityModel.FK_Usuario_Rol_Rol" ManuallyRouted="false" />
         <AssociationConnector Association="IdentityModel.FK_Usuario_Rol_Usuario" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="IdentityModel.Empleado" Width="1.5" PointX="3" PointY="7.375" />
-        <EntityTypeShape EntityType="IdentityModel.HorarioLaboral" Width="1.5" PointX="5.25" PointY="7.375" />
-        <EntityTypeShape EntityType="IdentityModel.Turno" Width="1.5" PointX="3" PointY="11.5" />
+        <EntityTypeShape EntityType="IdentityModel.Empleado" Width="1.5" PointX="3.125" PointY="3.25" />
+        <EntityTypeShape EntityType="IdentityModel.HorarioLaboral" Width="1.625" PointX="4.875" PointY="3.25" />
+        <EntityTypeShape EntityType="IdentityModel.Turno" Width="1.5" PointX="6.75" PointY="3.625" />
         <AssociationConnector Association="IdentityModel.FK_Empleado_Usuario" />
         <AssociationConnector Association="IdentityModel.FK_HorarioLaboral_Empleado" />
         <AssociationConnector Association="IdentityModel.FK_HorarioLaboral_Turno" />

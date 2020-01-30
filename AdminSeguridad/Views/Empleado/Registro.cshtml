@@ -26,53 +26,54 @@
                             <div class="col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group ">
                                     <label>Nombre:</label>
-                                    @Html.TextBoxFor(model => model.StrNombre, new { @class = "form-control input-sm", placeholder = "Nombre del Empleado", required = "", pattern = "", id = "StrNombre" })
+                                    @Html.TextBoxFor(model => model.StrNombre, new { @class = "form-control input-sm", placeholder = "Nombre del Empleado", id = "StrNombre" })
                                     @Html.ValidationMessageFor(model => model.StrNombre, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group ">
                                     <label>Apellido Paterno:</label>
-                                    @Html.TextBoxFor(model => model.StrApellidoPaterno, new { @class = "form-control input-sm", placeholder = "Apellido Paterno", required = "", pattern = "", id = "StrApellidoPaterno" })
+                                    @Html.TextBoxFor(model => model.StrApellidoPaterno, new { @class = "form-control input-sm", placeholder = "Apellido Paterno", id = "StrApellidoPaterno" })
                                     @Html.ValidationMessageFor(model => model.StrApellidoPaterno, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group ">
                                     <label>Apellido Materno:</label>
-                                    @Html.TextBoxFor(model => model.StrApellidoMaterno, new { @class = "form-control input-sm", placeholder = "Aapellido Materno", required = "", pattern = "", id = "StrApellidoMaterno" })
+                                    @Html.TextBoxFor(model => model.StrApellidoMaterno, new { @class = "form-control input-sm", placeholder = "Aapellido Materno", id = "StrApellidoMaterno" })
                                     @Html.ValidationMessageFor(model => model.StrApellidoMaterno, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group ">
                                     <label>E-mail:</label>
-                                    @Html.TextBoxFor(model => model.usuario.Email, new { @class = "form-control input-sm", placeholder = "Tu email", required = "", pattern = "[a-zA-Z0-9._-]{3,25}[@]{1}(hotmail|gmail|outlook|yahoo|cruzazul){1}[.]{1}(com|mx|net){1}", id = "Email" })
-                                    @Html.ValidationMessageFor(model => model.usuario.Email, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(model => model.UsuarioViewModel.Email, new { @class = "form-control input-sm", placeholder = "Tu email", id = "Email" })
+                                    @Html.ValidationMessageFor(model => model.UsuarioViewModel.Email, "", new { @class = "text-danger" })
+                                    
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-6">
                                 <div class="form-group ">
                                     <label>Password:</label>
-                                    @Html.PasswordFor(model => model.usuario.Clave, new { @class = "form-control input-sm", required = "", id = "Clave" })
-                                    @Html.ValidationMessageFor(model => model.usuario.Clave, "", new { @class = "text-danger" })
+                                    @Html.PasswordFor(model => model.UsuarioViewModel.Clave, new { @class = "form-control input-sm", id = "Clave" })
+                                    @Html.ValidationMessageFor(model => model.UsuarioViewModel.Clave, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group ">
                                     <label>Horario de Entrada:</label>
-                                    @Html.TextBoxFor(model => model.HorarioLaboral.dteHorarioEntrada, new { @class = "form-control input-sm", placeholder = "Horario de Entrada", required = "", id = "dteHorarioEntrada" })
-                                    @Html.ValidationMessageFor(model => model.HorarioLaboral.dteHorarioEntrada, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(model => model.HorarioLaboralViewModel.DteHorarioEntrada, new { @class = "form-control input-sm", placeholder = "Horario de Entrada", id = "dteHorarioEntrada" })
+                                    @Html.ValidationMessageFor(model => model.HorarioLaboralViewModel.DteHorarioEntrada, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group ">
                                     <label>Horario de Salida:</label>
-                                    @Html.TextBoxFor(model => model.HorarioLaboral.dteHorarioSalida, new { @class = "form-control input-sm", placeholder = "Horario de Salida", required = "", id = "dteHorarioSalida" })
-                                    @Html.ValidationMessageFor(model => model.HorarioLaboral.dteHorarioSalida, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(model => model.HorarioLaboralViewModel.DteHorarioSalida, new { @class = "form-control input-sm", placeholder = "Horario de Salida", id = "dteHorarioSalida" })
+                                    @Html.ValidationMessageFor(model => model.HorarioLaboralViewModel.DteHorarioSalida, "", new { @class = "text-danger" })
                                 </div>
                                 <div class="form-group ">
                                     <label>Fecha de Ingreso:</label>
-                                    @Html.TextBoxFor(model => model.DteFechaIngreso, new { @class = "form-control input-sm", type = "date", id = "dteHorarioSalida" })
+                                    @Html.TextBoxFor(model => model.DteFechaIngreso, new { @class = "form-control input-sm", type = "date", id = "DteFechaIngreso" })
 
                                 </div>
                                 <div class="form-group">
                                     <label>Turno:</label>
-                                    @Html.DropDownList("Turno", null, htmlAttributes: new { @class = "form-control input-sm", id = "Turno" })
+                                    @Html.DropDownList("IdTurno", null, htmlAttributes: new { @class = "form-control input-sm",id= "IdTurno" })
                                 </div>
                                 <div class="form-group">
                                     <label>Rol del Usuario:</label>
-                                    @Html.DropDownList("Roles", null, htmlAttributes: new { @class = "form-control input-sm", id = "Roles" })
+                                    @Html.DropDownList("IdRoles", null, htmlAttributes: new { @class = "form-control input-sm",id="IdRoles"})
                                 </div>
                                 <div class="form-group">
                                     <br />

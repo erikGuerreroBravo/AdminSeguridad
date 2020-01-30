@@ -32,7 +32,5 @@ namespace AdminSeguridad.Models
         public virtual DbSet<Empleado> Empleado { get; set; }
         public virtual DbSet<HorarioLaboral> HorarioLaboral { get; set; }
         public virtual DbSet<Turno> Turno { get; set; }
-
-        public System.Data.Entity.DbSet<AdminSeguridad.ViewModels.EmpleadoViewModel> EmpleadoViewModels { get; set; }
     }
 }

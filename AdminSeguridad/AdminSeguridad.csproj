@@ -195,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Business\EmpleadoBusiness.cs" />
+    <Compile Include="Business\UsuarioRolBusiness.cs" />
+    <Compile Include="Contract\IUsuarioRol.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EjemploController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
@@ -242,6 +245,7 @@
     </Compile>
     <Compile Include="Security\SessionPersister.cs" />
     <Compile Include="ViewModels\EmpleadoViewModel.cs" />
+    <Compile Include="ViewModels\HorarioLaboralViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\UsuarioViewModel.cs" />
   </ItemGroup>
