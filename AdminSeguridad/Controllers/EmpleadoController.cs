@@ -82,8 +82,61 @@ namespace AdminSeguridad.Controllers
 
 
             }
-            return RedirectToAction("Registro", "Empleado");
+            return RedirectToAction("Usuarios", "Empleado");
         }
+
+
+        [HttpGet]
+        [Authorize(Roles = "Administrador")]
+        public ActionResult Usuarios()
+        {
+            try
+            {
+                IUsuarios usuarios = new UsuariosBusiness();
+                return View(LlenarViewModel(usuarios.Consultar()));
+            }
+            catch (Exception ex)
+            {
+
+                return RedirectToAction("NotFound", "Error");
+            }
+        }
+
+
+
+
+        #region LlenarViewModel
+        private List<EmpleadoViewModel> LlenarViewModel(List<Usuario> usuarios)
+        {
+            List<EmpleadoViewModel> empleados = new List<EmpleadoViewModel>();
+            foreach (Usuario user in usuarios)
+            {
+                EmpleadoViewModel empleadoView = new EmpleadoViewModel();
+                empleadoView.Id = user.Id;
+                foreach (Empleado empleado in user.Empleado)
+                {
+                    empleadoView.StrNombre = empleado.strNombre;
+                    empleadoView.StrApellidoPaterno = empleado.strApellidoPaterno;
+                    empleadoView.StrApellidoMaterno = empleado.strApellidoMaterno;
+                    empleadoView.UsuarioViewModel = new UsuarioViewModel();
+                    empleadoView.UsuarioViewModel.Email = user.Email;
+                    foreach (HorarioLaboral horario in empleado.HorarioLaboral)
+                    {
+                        empleadoView.Turno =  horario.Turno.strNombre;
+                    }
+                    
+                }
+                foreach (Usuario_Rol rol in user.Usuario_Rol)
+                {
+                    empleadoView.Rol = rol.Rol.Nombre;
+                }
+                empleados.Add(empleadoView);
+            }
+
+            return empleados;
+        }
+
+        #endregion
 
     }
 }

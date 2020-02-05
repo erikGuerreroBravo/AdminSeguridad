@@ -191,5 +191,15 @@ namespace AdminSeguridad.Controllers
             return Result;
         }
 
+
+        [HttpGet]
+        [Authorize(Roles = "Administrador")]
+        public ActionResult Cuentas()
+        {
+            return View();
+        }
+
+
+
     }
 }

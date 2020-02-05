@@ -16,6 +16,8 @@ namespace AdminSeguridad.ViewModels
         public string DteFechaIngreso { get; set; }
         public int IdTurno { get; set; }
         public int IdRoles { get; set; }
+        public string Rol { get; set; }
+        public string Turno { get; set; }
 
         public UsuarioViewModel UsuarioViewModel { get; set; }
         public HorarioLaboralViewModel HorarioLaboralViewModel { get; set; }

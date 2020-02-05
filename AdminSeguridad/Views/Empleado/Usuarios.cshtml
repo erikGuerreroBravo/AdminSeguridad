@@ -1,0 +1,89 @@
+﻿@model List<AdminSeguridad.ViewModels.EmpleadoViewModel>
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Usuarios</h2>
+
+<p>
+    @Html.ActionLink("Agregar Usuario", "Registro", "Empleado")
+</p>
+
+<div class="bs-container" style="min-height:960px;">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <h5 class="box-title">
+                    <label class="text-success emailtitleletter">
+                        <i class="text-success fa fa-graduation-cap"></i>
+                        @User.Identity.Name
+                    </label>&nbsp;
+
+                </h5>
+            </div>
+            <div class="box-body">
+                <div role="form">
+                    <div class="form-group">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <table class="table table-responsive table-bordered">
+                                <tr>
+                                    <th>
+                                        <label>Nombre</label>
+                                    </th>
+                                    <th>
+                                        <label>Apellido Paterno</label>
+                                    </th>
+                                    <th>
+                                        <label>Apellido Materno</label>
+                                    </th>
+                                    <th>
+                                        <label>Email</label>
+                                    </th>
+                                    <th>
+                                        <label>Rol de Usuario</label>
+                                    </th>
+                                    <th>
+                                        <label>Turno</label>
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StrNombre)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StrApellidoPaterno)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StrApellidoMaterno)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.UsuarioViewModel.Email)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Rol)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Turno)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                                            @Html.ActionLink("Detalle", "Details", new { id = item.Id }) |
+                                            
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

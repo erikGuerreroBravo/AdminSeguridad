@@ -186,6 +186,7 @@
     </Content>
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Empleado\Registro.cshtml" />
+    <Content Include="Views\Empleado\Usuarios.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -197,7 +198,9 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Business\EmpleadoBusiness.cs" />
     <Compile Include="Business\UsuarioRolBusiness.cs" />
+    <Compile Include="Business\UsuariosBusiness.cs" />
     <Compile Include="Contract\IUsuarioRol.cs" />
+    <Compile Include="Contract\IUsuarios.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EjemploController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
